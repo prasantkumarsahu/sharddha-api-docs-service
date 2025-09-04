@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: API-DOCS-SERVICE
+
+server:
+  port: 8008
+  servlet:
+    context-path: /api-docs
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+    registry-fetch-interval-seconds: 10
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    urls: [ ]   # will be filled dynamically
